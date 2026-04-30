@@ -26,12 +26,14 @@
     function jogarNovamente() {
       jogar = true;//variável jogar volta a ser verdadeira
       //armazenamos todas as div na variável divis (getElementsByTagName)
-      let divis = document.getElementsByTagName("div");
+      let divis = document.getElementsByTagName("div");}
       //percorremos todas as divs armazenadas
       for (i = 0; i < divis.length; i++) {
-        //verificamos se sao as divs com ids 0 ou 1 ou 2
-        if (divis[i].id == 0 || divis[i].id == 1 || divis[i].id == 2) {
-          //alteramos a classe css das divs 0, 1 e 2 (className)
+        //verificamos se sao as divs com ids 0 ou 1 ou 2 OU 3 OU 4
+        if (divis[i].id == 0 || divis[i].id == 1 || divis[i].id == 2 || divis[i].id == 3 || divis[i].id == 4) {
+) {
+ 
+          //alteramos a classe css das divs 0, 1 , 2 , 3 , 4(className)
           divis[i].className = "inicial";
         }
       }
@@ -49,7 +51,7 @@
     function atualizaPlacar(acertos, tentativas) {
       //calcula o desempenho em porcentagem
       desempenho = (acertos / tentativas) * 100;
-      //escreve o placar com os valores atualizados (innerHTML)
+      //escreve o placar com os valores atualizados (innerHTML )
       document.getElementById("resposta").innerHTML = "Placar - Acertos: " + acertos + " Tentativas: " + tentativas + " Desempenho: " + Math.round(desempenho) + "%";
 
     }
